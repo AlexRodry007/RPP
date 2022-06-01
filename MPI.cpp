@@ -38,6 +38,7 @@ int main(int argc, char** argv) {
     double succeses;
     int currentRoll;
     bool botch;
+        MPI_Bcast(&tests_per_process, 1, MPI_INT, rootRank, MPI_COMM_WORLD);           
     for (int difficulty = minDifficuly; difficulty <= maxDifficulty; difficulty++)
     {
         for (int currrentDices = 1; currrentDices <= maxDices; currrentDices++)
